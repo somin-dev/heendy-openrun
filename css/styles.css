@@ -123,6 +123,13 @@ a {
   color: var(--muted);
 }
 
+.lead-sub {
+  margin: 10px 0 0;
+  font-size: 15px;
+  font-weight: 700;
+  color: var(--pink);
+}
+
 .lead {
   font-family: var(--display);
   font-weight: 400;
@@ -754,6 +761,9 @@ html { scroll-behavior: smooth; }
 }
 
 .placeholder-btn.has-img {
+  display: block;
+  aspect-ratio: auto;
+  margin: 0 auto;
   padding: 0;
   background: none;
   border: 0;
@@ -892,46 +902,20 @@ html { scroll-behavior: smooth; }
   color: var(--pink-deep);
 }
 
-.tile .tag {
-  display: inline-block;
-  font-size: 10.5px;
-  font-weight: 700;
-  line-height: 1;
-  padding: 4px 8px;
-  border-radius: 999px;
-  background: var(--pink-soft);
-  color: var(--pink-deep);
-}
-
-.sponsor {
-  margin: 0 auto 22px;
-  padding: 16px 18px;
-  max-width: 340px;
-  background: var(--white);
-  border-radius: 16px;
-  box-shadow: var(--shadow-sm);
-  display: flex;
+/* 링티 협찬 표기 — 참가 리워드 '링티제로' 카드 하단 */
+.tile .sponsor-mini {
+  display: inline-flex;
   align-items: center;
-  gap: 14px;
-  text-align: left;
-}
-.sponsor img {
-  width: 76px;
-  height: auto;
-  flex-shrink: 0;
-}
-.sponsor p {
-  margin: 0;
-  font-size: 11.5px;
-  line-height: 1.6;
-  color: var(--muted);
-}
-.sponsor b {
-  display: block;
+  gap: 5px;
   font-size: 10.5px;
-  letter-spacing: 0.12em;
+  font-weight: 400;
+  line-height: 1;
   color: var(--hint);
-  margin-bottom: 2px;
+}
+.tile .sponsor-mini img {
+  width: 34px;
+  height: auto;
+  display: inline-block;
 }
 
 .chip.muted {

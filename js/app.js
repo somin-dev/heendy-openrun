@@ -26,17 +26,17 @@
   });
 })();
 
-/* ---- 페이스 그룹 탭 (코스 약 5km 기준 예상 완주 시간) ---- */
+/* ---- 페이스 그룹 탭 (1km 페이스 · 출발 시간) ---- */
 const groups = {
-  A: { pace: "7분 30초", finish: "약 38분" },
-  B: { pace: "7분", finish: "약 35분" },
-  C: { pace: "6분 30초", finish: "약 33분" },
+  A: { pace: "7분 30초", depart: "08:30" },
+  B: { pace: "7분", depart: "08:40" },
+  C: { pace: "6분 30초", depart: "08:50" },
 };
 
 const tabs = document.querySelectorAll("[data-tab]");
 const labels = document.querySelectorAll("[data-group-label]");
 const gatherOut = document.querySelector("[data-pace-out]");
-const departOut = document.querySelector("[data-finish-out]");
+const departOut = document.querySelector("[data-depart-out]");
 const timePanel = document.getElementById("fr-timepanel");
 
 function selectGroup(key) {
@@ -51,7 +51,7 @@ function selectGroup(key) {
     el.textContent = `${key} 그룹`;
   });
   if (gatherOut) gatherOut.textContent = group.pace;
-  if (departOut) departOut.textContent = group.finish;
+  if (departOut) departOut.textContent = group.depart;
   if (timePanel) timePanel.setAttribute("aria-labelledby", `fr-tab-${key}`);
 }
 
